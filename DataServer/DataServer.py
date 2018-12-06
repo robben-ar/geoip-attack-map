@@ -29,15 +29,17 @@ redis_ip = '127.0.0.1'
 redis_instance = None
 
 # required input paths
-syslog_path = '/var/log/syslog'
-#syslog_path = '/var/log/reverse-proxy.log'
-db_path = '../DataServerDB/GeoLite2-City.mmdb'
+#syslog_path = '/var/log/syslog'
+#syslog_path = '/var/log/client_logs/seguridad-siem/attack-map-sample.log'
+syslog_path = '/var/log/syslog/squid3/logs.log'
+#syslog_path = '/var/log/syslog/cisco/%ASA-6-302014.log'
+db_path = '/root/geoip-attack-map/DataServerDB/GeoLite2-City.mmdb'
 
 # file to log data
 #log_file_out = '/var/log/map_data_server.out'
 
 # ip for headquarters
-hq_ip = '8.8.8.8'
+hq_ip = '8.8.4.4'
 
 # stats
 server_start_time = strftime("%d-%m-%Y %H:%M:%S", localtime()) # local time

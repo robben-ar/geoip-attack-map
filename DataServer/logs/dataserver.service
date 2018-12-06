@@ -1,0 +1,10 @@
+[Unit]
+Description=Collect logs iptables
+
+[Service]
+ExecStart=/root/geoip-attack-map/DataServer/DataServer.py
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=dataserver.service

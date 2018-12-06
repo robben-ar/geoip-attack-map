@@ -1,0 +1,2 @@
+cp /opt/geoip-attack-map/DataServer/logs/dataserver.service /lib/systemd/system/dataserver.service && cp /opt/geoip-attack-map/DataServer/logs/logs_iptables.service /lib/systemd/system/logs_iptables.service && cp /opt/geoip-attack-map/DataServer/logs/attackmap.service /lib/systemd/system/attackmap.service
+systemctl daemon-reload && systemctl start dataserver.service && systemctl start logs_iptables.service && systemctl start attackmap.service

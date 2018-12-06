@@ -4,12 +4,12 @@
 // - AttackMapServer machine:
 //   - Internal IP: 127.0.0.1
 //   - External IP: 192.168.11.106
-var webSock = new WebSocket("ws:/127.0.0.1:8888/websocket"); // Internal
-//var webSock = new WebSocket("ws:/192.168.1.100:8888/websocket"); // External
+//var webSock = new WebSocket("ws:/127.0.0.1:8888/websocket"); // Internal
+var webSock = new WebSocket("ws:/192.168.11.106:8888/websocket"); // External
 
 // link map
 
-L.mapbox.accessToken = "pk.eyJ1IjoibW1heTYwMSIsImEiOiJjaWgyYWU3NWQweWx2d3ltMDl4eGk5eWY1In0.9YoOkALPP7zaoim34ZITxw";
+L.mapbox.accessToken = "pk.eyJ1Ijoicm9iYmVuMTQiLCJhIjoiY2prb2dqNnliMDJvejN1b2NvMmpodHI4YiJ9.k5L9JDcoQdnzh5t8e2B4wA"; // make account and pk in mapbox free
 var map = L.mapbox.map("map", "mapbox.dark", {
 center: [0, 0], // lat, long
 zoom: 2
@@ -19,7 +19,7 @@ zoom: 2
 L.control.fullscreen().addTo(map);
 
 // hq coords
-var hqLatLng = new L.LatLng(37.3845, -122.0881);
+var hqLatLng = new L.LatLng(-34.609810, -58.369815);
 
 // hq marker
 L.circle(hqLatLng, 110000, {

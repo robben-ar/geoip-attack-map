@@ -1,0 +1,10 @@
+[Unit]
+Description=Parse logs iptables of syslog
+
+[Service]
+ExecStart=/etc/init.d/logs_iptables start
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=logs_iptables.service

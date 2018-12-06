@@ -1,0 +1,10 @@
+[Unit]
+Description=Attack Map
+
+[Service]
+ExecStart=/bin/bash -c 'cd /opt/geoip-attack-map/AttackMapServer/ && /usr/bin/python3 /opt/geoip-attack-map/AttackMapServer/AttackMapServer.py'
+StandardOutput=null
+
+[Install]
+WantedBy=multi-user.target
+Alias=attackmap.service
